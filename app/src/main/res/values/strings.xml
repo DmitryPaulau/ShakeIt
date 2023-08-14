@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ShakeIt</string>
     <string name="shakeit">ShakeIt</string>
+    <string name="onboarding_step1_text">Find a cocktail that interests you.</string>
+    <string name="onboarding_step2_text">Prepare a cocktail according to the given proportions.</string>
+    <string name="onboarding_step3_text">Add to favorites so as not to lose your favorite cocktail.</string>
+    <string name="skip">Skip</string>
 </resources>

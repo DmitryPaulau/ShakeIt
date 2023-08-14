@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="shakeit">ShakeIt</string>
+    <string name="choose_and_try_different_cocktail_options">Choose and try different cocktail options.</string>
+    <string name="skip">Skip</string>
 </resources>
