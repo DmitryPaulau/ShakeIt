@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.shakeit.R
 import com.example.shakeit.databinding.FragmentOnboardingBinding
+import com.example.shakeit.ui.BottomNavigationFragment
 import com.example.shakeit.ui.allcocktails.AllCocktailsFragment
 import com.example.shakeit.util.replaceFragment
 
@@ -26,7 +27,7 @@ class OnboardingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.openListFragment?.setOnClickListener {
-            parentFragmentManager.replaceFragment(R.id.container, AllCocktailsFragment())
+            parentFragmentManager.replaceFragment(R.id.container, BottomNavigationFragment())
         }
         binding?.viewPager?.adapter = OnboardingAdapter(parentFragmentManager)
 //        binding?.circleIndicator?.setViewPager(binding?.viewPager)
