@@ -5,16 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.shakeit.databinding.ItemCocktailBinding
-import com.example.shakeit.model.Cocktail
+import com.example.shakeit.model.Drink
 
 
-class CocktailsAdapter : ListAdapter<Cocktail, CocktailsViewHolder>(
-    object : DiffUtil.ItemCallback<Cocktail>() {
-        override fun areItemsTheSame(oldItem: Cocktail, newItem: Cocktail): Boolean {
+class CocktailsAdapter : ListAdapter<Drink, CocktailsViewHolder>(
+    object : DiffUtil.ItemCallback<Drink>() {
+        override fun areItemsTheSame(oldItem: Drink, newItem: Drink): Boolean {
             return false
         }
 
-        override fun areContentsTheSame(oldItem: Cocktail, newItem: Cocktail): Boolean {
+        override fun areContentsTheSame(oldItem: Drink, newItem: Drink): Boolean {
             return false
         }
 
@@ -29,5 +29,5 @@ class CocktailsAdapter : ListAdapter<Cocktail, CocktailsViewHolder>(
     override fun onBindViewHolder(holder: CocktailsViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-
 }
+

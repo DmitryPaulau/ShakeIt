@@ -6,5 +6,6 @@ import javax.inject.Inject
 class CocktailListRepository @Inject constructor(
     private val cocktailApi: CocktailApi
 ) {
-    suspend fun getCocktailList() = cocktailApi.getListCocktail()
+    suspend fun getAllCocktailList() = cocktailApi.getCocktailList()
+
 }

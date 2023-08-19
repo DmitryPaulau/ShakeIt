@@ -5,11 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import androidx.paging.PagingData
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shakeit.databinding.FragmentAllCocktailsBinding
+import com.example.shakeit.model.Drink
+import com.example.shakeit.model.network.CocktailListResponse
+import com.example.shakeit.ui.allcocktails.adapter.CocktailsAdapter
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 class AllCocktailsFragment : Fragment() {
 
     private var binding: FragmentAllCocktailsBinding? = null
+
+    private val viewModel: AllCocktailsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,5 +34,21 @@ class AllCocktailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.listCocktail.observe(viewLifecycleOwner) {
+            setList(it)
+        }
+        viewModel.getListCocktail()
+    }
+
+    private fun setList(list: ArrayList<Drink>) {
+        binding?.recyclerView?.run {
+            if (adapter == null) {
+                adapter = CocktailsAdapter()
+                layoutManager = LinearLayoutManager(requireContext())
+            }
+            (adapter as? CocktailsAdapter)?.submitList(list)
+            adapter?.notifyDataSetChanged()
+        }
     }
 }
+

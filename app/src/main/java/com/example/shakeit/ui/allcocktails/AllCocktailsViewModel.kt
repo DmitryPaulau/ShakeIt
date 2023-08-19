@@ -3,25 +3,29 @@ package com.example.shakeit.ui.allcocktails
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.shakeit.model.Cocktail
+import androidx.lifecycle.viewModelScope
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.cachedIn
+import com.example.shakeit.model.Drink
 import com.example.shakeit.repository.CocktailListRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class AllCocktailsViewModel @Inject constructor(
     private val cocktailListRepository: CocktailListRepository
 ) : ViewModel() {
+    val listCocktail = MutableLiveData<ArrayList<Drink>>()
 
-    val listCocktail = MutableLiveData<ArrayList<Cocktail>>()
-
-//    fun getListCocktail() {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            val response = cocktailListRepository.getCocktailList()
-//            if (response.isSuccessful) {
-//                listCocktail.postValue()
-//            }
-//        }
-//    }
-
+    fun getListCocktail() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val response = cocktailListRepository.getAllCocktailList()
+            if (response.isSuccessful) {
+            listCocktail.postValue(response.body()?.drinks)
+            }
+        }
+    }
 }

@@ -7,9 +7,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
-
-private const val BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/"
+import com.example.shakeit.network.CocktailApi.Companion.BASE_URL
 
 @Module
 @InstallIn(SingletonComponent::class)
