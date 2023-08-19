@@ -1,5 +1,9 @@
 package com.example.shakeit.model.network
 
+import com.example.shakeit.model.Drink
+import com.google.gson.annotations.SerializedName
+
 data class CocktailListResponse(
-    val drinks: List<Drink>
+    @SerializedName("drinks")
+    val drinks: ArrayList<Drink>
 )

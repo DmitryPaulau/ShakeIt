@@ -2,7 +2,7 @@ package com.example.shakeit.model.network
 
 import com.google.gson.annotations.SerializedName
 
-data class Drink(
+data class DrinkInfo(
     val dateModified: String,
     val idDrink: String,
     val strAlcoholic: String,
