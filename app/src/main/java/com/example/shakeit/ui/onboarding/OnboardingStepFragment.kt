@@ -37,7 +37,6 @@ class OnboardingStepFragment : Fragment() {
             STEP_1 -> {
                 binding?.imageOnboardingStep?.setImageResource(R.drawable.onboarding)
                 binding?.textOnboardingStep?.setText(R.string.onboarding_step1_text)
-
             }
 
             STEP_2 -> {
@@ -53,7 +52,6 @@ class OnboardingStepFragment : Fragment() {
     }
 
     companion object {
-
         fun getOnboardingStepFragment(stepNumber: Int): OnboardingStepFragment {
             return OnboardingStepFragment().apply {
                 arguments = bundleOf(STEP_EXTRA to stepNumber)

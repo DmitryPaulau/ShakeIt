@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.bumptech.glide.Glide
 import com.example.shakeit.databinding.ItemCocktailBinding
 import com.example.shakeit.model.Drink
 
@@ -28,6 +29,7 @@ class CocktailsAdapter : ListAdapter<Drink, CocktailsViewHolder>(
 
     override fun onBindViewHolder(holder: CocktailsViewHolder, position: Int) {
         holder.bind(getItem(position))
+
     }
 }
 

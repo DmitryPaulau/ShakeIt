@@ -6,16 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import androidx.paging.PagingData
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.example.shakeit.databinding.FragmentAllCocktailsBinding
 import com.example.shakeit.model.Drink
-import com.example.shakeit.model.network.CocktailListResponse
 import com.example.shakeit.ui.allcocktails.adapter.CocktailsAdapter
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AllCocktailsFragment : Fragment() {
 
     private var binding: FragmentAllCocktailsBinding? = null
@@ -44,7 +42,7 @@ class AllCocktailsFragment : Fragment() {
         binding?.recyclerView?.run {
             if (adapter == null) {
                 adapter = CocktailsAdapter()
-                layoutManager = LinearLayoutManager(requireContext())
+                layoutManager = GridLayoutManager(requireContext(), 2)
             }
             (adapter as? CocktailsAdapter)?.submitList(list)
             adapter?.notifyDataSetChanged()
