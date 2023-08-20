@@ -24,7 +24,9 @@ class BottomNavigationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavigationContainer, FavoritesFragment())
+            .commit()
         binding?.bottomNavigationView?.selectedItemId = R.id.favorites
         binding?.bottomNavigationView?.setOnItemSelectedListener {
 

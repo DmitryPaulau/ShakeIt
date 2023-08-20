@@ -9,4 +9,6 @@ data class Drink(
     val strDrink: String,
     @SerializedName("strDrinkThumb")
     val strDrinkThumb: String,
+    @SerializedName("strAlcoholic")
+    val strAlcoholic: String
 )

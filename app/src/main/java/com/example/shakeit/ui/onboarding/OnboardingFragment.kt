@@ -26,11 +26,11 @@ class OnboardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.openListFragment?.setOnClickListener {
+        binding?.skip?.setOnClickListener {
             parentFragmentManager.replaceFragment(R.id.container, BottomNavigationFragment())
         }
         binding?.viewPager?.adapter = OnboardingAdapter(parentFragmentManager)
-//        binding?.circleIndicator?.setViewPager(binding?.viewPager)
+        binding?.circleIndicator?.setViewPager(binding?.viewPager)
 
     }
 }
