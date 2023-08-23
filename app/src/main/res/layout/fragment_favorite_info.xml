@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/nameCocktail"
+        style="@style/h1_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name cocktail" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameCocktail" />
+
+    <TextView
+        android:id="@+id/categoryCocktail"
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/nameCocktail"
+        tools:text="Alcoholic" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewInfo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ACA089"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:src="@drawable/splash" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewInfo" />
+
+    <TextView
+        android:id="@+id/instructions"
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:text="Blend with ice. Serve in…s. Garnish with carrot." />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/ingredients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+    <TextView
+        android:id="@+id/ingredient1"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/ingredient2"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient1"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/ingredient3"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient2"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/ingredient4"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient3"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/measure1"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient1"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/measure2"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient2"
+        app:layout_constraintTop_toBottomOf="@+id/measure1"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/measure3"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient3"
+        app:layout_constraintTop_toBottomOf="@+id/measure2"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/measure4"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient4"
+        app:layout_constraintTop_toBottomOf="@+id/measure3"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/ingredient5"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/ingredient6"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient5"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/ingredient7"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient6"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/ingredient8"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient7"
+        tools:text="Ingredients" />
+
+    <TextView
+        android:id="@+id/measure5"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient5"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/measure6"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient6"
+        app:layout_constraintTop_toBottomOf="@+id/measure5"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/measure7"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient7"
+        app:layout_constraintTop_toBottomOf="@+id/measure6"
+        tools:text="Measure" />
+
+    <TextView
+        android:id="@+id/measure8"
+        style="@style/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="start"
+        app:layout_constraintStart_toEndOf="@+id/ingredient8"
+        app:layout_constraintTop_toBottomOf="@+id/measure7"
+        tools:text="Measure" />
+
+    <Button
+        android:id="@+id/addToFavorites"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#ACA089"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
