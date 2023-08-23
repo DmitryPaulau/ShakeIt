@@ -9,7 +9,7 @@ import com.example.shakeit.R
 import com.example.shakeit.databinding.FragmentBottomNavigationBinding
 import com.example.shakeit.ui.allcocktails.AllCocktailsFragment
 import com.example.shakeit.ui.favorites.FavoritesFragment
-import com.example.shakeit.ui.random.RandomFragment
+import com.example.shakeit.ui.random.RandomCocktailFragment
 
 class BottomNavigationFragment : Fragment() {
     private var binding: FragmentBottomNavigationBinding? = null
@@ -33,7 +33,7 @@ class BottomNavigationFragment : Fragment() {
             when (it.itemId) {
                 R.id.all -> replaceFragment(AllCocktailsFragment())
                 R.id.favorites -> replaceFragment(FavoritesFragment())
-                R.id.random -> replaceFragment(RandomFragment())
+                R.id.random -> replaceFragment(RandomCocktailFragment())
 
                 else -> {
 

@@ -1,4 +1,4 @@
-package com.example.shakeit.model.network
+package com.example.shakeit.model
 
 import com.example.shakeit.model.Drink
 import com.google.gson.annotations.SerializedName

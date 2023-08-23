@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AllCocktailsViewModel @Inject constructor(
-    private val cocktailListRepository: CocktailListRepository
+    private val cocktailListRepository: CocktailListRepository,
 ) : ViewModel() {
     val listCocktail = MutableLiveData<ArrayList<Drink>>()
 
@@ -21,8 +21,9 @@ class AllCocktailsViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             val response = cocktailListRepository.getAllCocktailList()
             if (response.isSuccessful) {
-            listCocktail.postValue(response.body()?.drinks)
+                listCocktail.postValue(response.body()?.drinks)
             }
         }
     }
 }
+
