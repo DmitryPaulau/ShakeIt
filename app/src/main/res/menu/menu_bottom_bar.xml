@@ -3,16 +3,16 @@
     <item
         android:id="@+id/all"
         android:icon="@drawable/ic_drink"
-        android:title="All"
+        android:title="@string/all"
         android:orderInCategory="1"/>
        <item
         android:id="@+id/favorites"
         android:icon="@drawable/ic_star"
-        android:title="Favorites"
+        android:title="@string/favorites"
            android:orderInCategory="2"/>
     <item
         android:id="@+id/random"
         android:icon="@drawable/ic_bubble"
-        android:title="Random"
+        android:title="@string/random"
         android:orderInCategory="3"/>
 </menu>

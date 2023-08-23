@@ -5,4 +5,13 @@
     <string name="onboarding_step2_text">Prepare a cocktail according to the given proportions.</string>
     <string name="onboarding_step3_text">Add to favorites so as not to lose your favorite cocktail.</string>
     <string name="skip">Skip</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="category">Category:</string>
+    <string name="instructions">Instructions</string>
+    <string name="add_to_favorites">Add To Favorites</string>
+    <string name="get_a_random_cocktail">Get a random cocktail</string>
+    <string name="favorites">Favorites</string>
+    <string name="all">All</string>
+    <string name="random">Random</string>
+    <string name="delete">Delete</string>
 </resources>
