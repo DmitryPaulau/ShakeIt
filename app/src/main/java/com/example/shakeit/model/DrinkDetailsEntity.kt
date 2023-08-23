@@ -1,0 +1,165 @@
+package com.example.shakeit.model
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "drinkDetails")
+data class DrinkDetailsEntity(
+
+    val dateModified: String?,
+
+    @PrimaryKey
+    @ColumnInfo(name = "drinkId")
+    val idDrink: String,
+
+    @ColumnInfo(name = "alcoholic")
+    val strAlcoholic: String?,
+    @ColumnInfo(name = "category")
+    val strCategory: String?,
+    @ColumnInfo(name = "creativeCommonsConfirmed")
+    val strCreativeCommonsConfirmed: String?,
+    @ColumnInfo(name = "drinkName")
+    val strDrink: String?,
+    @ColumnInfo(name = "drinkAlternate")
+    val strDrinkAlternate: String?,
+    @ColumnInfo(name = "drinkThumb")
+    val strDrinkThumb: String?,
+    val strGlass: String?,
+    val strIBA: String?,
+    val strImageAttribution: String?,
+    val strImageSource: String?,
+    @ColumnInfo(name = "ingredient1")
+    val strIngredient1: String?,
+    @ColumnInfo(name = "ingredient2")
+    val strIngredient2: String?,
+    @ColumnInfo(name = "ingredient3")
+    val strIngredient3: String?,
+    @ColumnInfo(name = "ingredient4")
+    val strIngredient4: String?,
+    @ColumnInfo(name = "ingredient5")
+    val strIngredient5: String?,
+    @ColumnInfo(name = "ingredient6")
+    val strIngredient6: String?,
+    @ColumnInfo(name = "ingredient7")
+    val strIngredient7: String?,
+    @ColumnInfo(name = "ingredient8")
+    val strIngredient8: String?,
+    @ColumnInfo(name = "ingredient9")
+    val strIngredient9: String?,
+    @ColumnInfo(name = "ingredient10")
+    val strIngredient10: String?,
+    @ColumnInfo(name = "ingredient11")
+    val strIngredient11: String?,
+    @ColumnInfo(name = "ingredient12")
+    val strIngredient12: String?,
+    @ColumnInfo(name = "ingredient13")
+    val strIngredient13: String?,
+    @ColumnInfo(name = "ingredient14")
+    val strIngredient14: String?,
+    @ColumnInfo(name = "ingredient15")
+    val strIngredient15: String?,
+    @ColumnInfo(name = "instructions")
+    val strInstructions: String?,
+    @ColumnInfo(name = "instructionsDE")
+    val strInstructionsDE: String?,
+    @ColumnInfo(name = "instructionsES")
+    val strInstructionsES: String?,
+    @ColumnInfo(name = "instructionsFR")
+    val strInstructionsFR: String?,
+    @ColumnInfo(name = "instructionsIT")
+    val strInstructionsIT: String?,
+    @ColumnInfo(name = "instructionsZH_HANS")
+    val strInstructionsZH_HANS: String?,
+    @ColumnInfo(name = "instructionsZH_HANT")
+    val strInstructionsZH_HANT: String?,
+    @ColumnInfo(name = "measure1")
+    val strMeasure1: String?,
+    @ColumnInfo(name = "measure2")
+    val strMeasure2: String?,
+    @ColumnInfo(name = "measure3")
+    val strMeasure3: String?,
+    @ColumnInfo(name = "measure4")
+    val strMeasure4: String?,
+    @ColumnInfo(name = "measure5")
+    val strMeasure5: String?,
+    @ColumnInfo(name = "measure6")
+    val strMeasure6: String?,
+    @ColumnInfo(name = "measure7")
+    val strMeasure7: String?,
+    @ColumnInfo(name = "measure8")
+    val strMeasure8: String?,
+    @ColumnInfo(name = "measure9")
+    val strMeasure9: String?,
+    @ColumnInfo(name = "measure10")
+    val strMeasure10: String?,
+    @ColumnInfo(name = "measure11")
+    val strMeasure11: String?,
+    @ColumnInfo(name = "measure12")
+    val strMeasure12: String?,
+    @ColumnInfo(name = "measure13")
+    val strMeasure13: String?,
+    @ColumnInfo(name = "measure14")
+    val strMeasure14: String?,
+    @ColumnInfo(name = "measure15")
+    val strMeasure15: String?,
+    @ColumnInfo(name = "tags")
+    val strTags: String?,
+    @ColumnInfo(name = "video")
+    val strVideo: String?
+) {
+    fun toDrinkDetails() =
+        DrinkDetails(
+            dateModified = dateModified,
+            idDrink = idDrink,
+            strAlcoholic = strAlcoholic,
+            strCategory = strCategory,
+            strCreativeCommonsConfirmed = strCreativeCommonsConfirmed,
+            strDrink = strDrink,
+            strDrinkAlternate = strDrinkAlternate,
+            strDrinkThumb = strDrinkThumb,
+            strGlass = strGlass,
+            strIBA = strIBA,
+            strImageAttribution = strImageAttribution,
+            strImageSource = strImageSource,
+            strIngredient1 = strIngredient1,
+            strIngredient2 = strIngredient2,
+            strIngredient3 = strIngredient3,
+            strIngredient4 = strIngredient4,
+            strIngredient5 = strIngredient5,
+            strIngredient6 = strIngredient6,
+            strIngredient7 = strIngredient7,
+            strIngredient8 = strIngredient8,
+            strIngredient9 = strIngredient9,
+            strIngredient10 = strIngredient10,
+            strIngredient11 = strIngredient11,
+            strIngredient12 = strIngredient12,
+            strIngredient13 = strIngredient13,
+            strIngredient14 = strIngredient14,
+            strIngredient15 = strIngredient15,
+            strInstructions = strInstructions,
+            strInstructionsDE = strInstructionsDE,
+            strInstructionsES = strInstructionsES,
+            strInstructionsFR = strInstructionsFR,
+            strInstructionsIT = strInstructionsIT,
+            strInstructionsZH_HANS = "",
+            strInstructionsZH_HANT = "",
+            strMeasure1 = strMeasure1,
+            strMeasure2 = strMeasure2,
+            strMeasure3 = strMeasure3,
+            strMeasure4 = strMeasure4,
+            strMeasure5 = strMeasure5,
+            strMeasure6 = strMeasure6,
+            strMeasure7 = strMeasure7,
+            strMeasure8 = strMeasure8,
+            strMeasure9 = strMeasure9,
+            strMeasure10 = strMeasure10,
+            strMeasure11 = strMeasure11,
+            strMeasure12 = strMeasure12,
+            strMeasure13 = strMeasure13,
+            strMeasure14 = strMeasure14,
+            strMeasure15 = strMeasure15,
+            strTags = strTags,
+            strVideo = strVideo
+        )
+}

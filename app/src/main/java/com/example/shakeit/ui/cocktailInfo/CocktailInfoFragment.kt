@@ -1,4 +1,4 @@
-package com.example.shakeit.ui.random
+package com.example.shakeit.ui.cocktailInfo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,30 +7,32 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
-import com.example.shakeit.databinding.FragmentRandomCocktailBinding
+import com.example.shakeit.databinding.FragmentCocktailInfoBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class RandomCocktailFragment : Fragment() {
+class CocktailInfoFragment : Fragment() {
 
-    private var binding: FragmentRandomCocktailBinding? = null
+    private var binding: FragmentCocktailInfoBinding? = null
 
-    private val viewModel: RandomCocktailViewModel by viewModels()
-
+    private val viewModel: CocktailInfoViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRandomCocktailBinding.inflate(inflater, container, false)
+        binding = FragmentCocktailInfoBinding.inflate(inflater, container, false)
         return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.randomCocktail.observe(viewLifecycleOwner) {
-            binding?.nameCocktailRandom?.text = it.strDrink
+        arguments?.getString("ID")?.run {
+            viewModel.fetchAdditionalData(this)
+        }
+        viewModel.drinkInfo.observe(viewLifecycleOwner) {
+            binding?.nameCocktail?.text = it.strDrink
             binding?.categoryCocktail?.text = it.strAlcoholic
             binding?.instructions?.text = it.strInstructions
             binding?.ingredient1?.text = it.strIngredient1
@@ -57,10 +59,12 @@ class RandomCocktailFragment : Fragment() {
                     .load(it.strDrinkThumb)
                     .into(it1)
             }
+
         }
         binding?.addToFavorites?.setOnClickListener {
             viewModel.addDrinkToFavorites()
         }
-        viewModel.getRandomCocktail()
     }
 }
+
+
